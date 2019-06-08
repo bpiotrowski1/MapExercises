@@ -1,9 +1,5 @@
 package pl.bpiotrowski1;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
-
 public class Main {
 
     public static void main(String[] args) throws NoSuchStudentException {
@@ -28,6 +24,7 @@ public class Main {
 
         System.out.println("Liczba studentow: " + university.studentCount());
 
-
+        System.out.println("Wypisz wszystkich studentow:");
+        System.out.println(university.getStudents().values());
     }
 }

@@ -1,10 +1,12 @@
 package pl.bpiotrowski1;
 
+import lombok.Getter;
+
 import java.util.Map;
 import java.util.TreeMap;
 
-public class University {
-    private Map<Long, Student> students = new TreeMap<>();
+class University {
+    @Getter private Map<Long, Student> students = new TreeMap<>();
 
     void addStudent(long indeks, String imie, String nazwisko) {
         students.put(indeks, (new Student(indeks, imie, nazwisko)));
@@ -23,11 +25,5 @@ public class University {
 
     int studentCount() {
         return students.size();
-    }
-
-    void printAllStudent() {
-        for(Long l : students.keySet()) {
-            System.out.println(students.get(l));
-        }
     }
 }
